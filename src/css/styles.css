@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply max-w-[1400px] mx-auto;
+  }
+
+  .align-center {
+    @apply flex items-center;
+  }
+
+  /* ==== Menu ==== */
+  .nav-link-menu {
+    @apply py-2.5 px-5 bg-pink hover:brightness-125 min-h-[60px] align-center;
+  }
+
+  .menu-active {
+    @apply text-pink/90 hover:!text-pink;
+  }
+
+  /* ==== Banner ==== */
+  .splide__pagination__page.is-active {
+    @apply bg-pink !important;
+  }
+
+  /* ==== E-commerce ==== */
+  .product-container {
+    @apply grid grid-cols-1 mini:grid-cols-2 xm:grid-cols-3 lg:grid-cols-4 gap-3.5;
+  }
+
+  .product-card {
+    @apply bg-white w-full xm:max-w-[320px] rounded-md overflow-hidden mx-auto;
+  }
+
+  .product-card__img {
+    @apply max-h-80 w-full object-cover rounded-md hover:scale-110 transition-all delay-150;
+  }
+
+  .product-card__img-add-shoplist {
+    @apply absolute transition-all  delay-100  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .badge {
+    @apply flex w-fit bg-pink py-2 px-2.5 rounded text-white text-xs leading-3 font-medium opacity-75 hover:opacity-90 text-center hover:after:ml-1;
+  }
+}

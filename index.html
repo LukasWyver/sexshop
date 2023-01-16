@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!--Tailwind-->
+  <link rel="stylesheet" href="/public/css/styles.css" />
+
+  <!--Phosphor icons -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+  <!--jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!--SplideCSS-->
+  <link rel="stylesheet" href="./src/libs/@splidejs/css/splide-core.min.css">
+
+  <title>Sex Shop | Home</title>
+</head>
+
+<body>
+  <header>
+    <div class="bg-pink">
+      <div class="wrapper align-center py-3.5">
+        <p class="text-white leading-4 flex-1 px-3.5">
+          Bem-vindo, faça seu
+          <a href="" class="text-gray-100 font-bold">login</a> ou
+          <a href="" class="text-gray-100 font-bold">cadastre-se</a>
+        </p>
+        <ul
+          class="text-white leading-4 hidden xs:flex items-end xm:items-center flex-col xm:flex-row justify-end flex-1 px-3.5 gap-1">
+          <li class="align-center">
+            <i class="ph-whatsapp-logo-light mr-1"></i>(43) 99875 4883
+          </li>
+          <li class="align-center">
+            <i class="ph-envelope-light mr-1"></i>comercial@sexshop.com
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--Logo-->
+    <div class="bg-white">
+      <div class="wrapper align-center flex-col sm:flex-row">
+        <div class="p-3.5">
+          <img src="./src/assets/logo.png" alt="sex shop logo" class="w-[267px]" />
+        </div>
+
+        <div class="sm:ml-auto w-full sm:w-[342px] p-3.5">
+          <nav class="font-semibold text-xl leading-5 text-pink align-center justify-between gap-1 pr-4">
+            <a class="align-center hover:-translate-y-1 transition-transform delay-150" href=""><i
+                class="ph-user-circle-fill text-3xl mr-1"></i>Conta</a>
+            <a class="align-center hover:-translate-y-1 transition-transform delay-150" href=""><i
+                class="ph-shopping-bag-light text-3xl mr-1"></i>Pedidos</a>
+            <a class="align-center relative hover:-translate-y-1 transition-transform delay-150" href="">
+              <i class="ph-shopping-cart-light text-3xl mr-1"></i>
+              <div
+                class="p-2 w-6 h-6 align-center absolute -right-4 -top-1.5 bg-pink text-xs leading-3 font-normal text-white rounded-full">
+                0
+              </div>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!--Menu-->
+    <div class="bg-pink">
+      <nav class="wrapper align-center justify-center overflow-hidden">
+
+        <!--menu mobile-->
+        <label class="lg:hidden block relative flex-1">
+          <i class="ph-list-light text-white text-lg nav-link-menu"></i>
+
+          <input type="checkbox" name="" class="peer hidden">
+
+          <div class="peer-checked:block hidden">
+            <!--bg-modal-->
+            <div class="fixed inset-0 bg-black opacity-60 z-40"></div>
+            <!--content modal-->
+            <div class="h-screen bg-gray-100 shadow-md fixed w-52 top-0 left-0 z-50 p-3.5">
+              <ul class="flex flex-col divide-y divide-gray-300 text-lg leading-5 text-gray-600 font-semibold">
+                <a class="py-2.5 hover:text-gray-900 menu-active" href=""><span>Home</span></a>
+                <a class="py-2.5 hover:text-gray-900" href=""><span>Acessórios</span></a>
+                <a class="py-2.5 hover:text-gray-900" href=""><span>Cosméticos</span></a>
+                <a class="py-2.5 hover:text-gray-900" href=""><span>Fetiches</span></a>
+                <a class="py-2.5 hover:text-gray-900" href=""><span>Mulheres</span></a>
+                <a class="py-2.5 hover:text-gray-900" href=""><span>Homens</span></a>
+                <a class="py-2.5 hover:text-gray-900" href=""><span>Preservativos</span></a>
+                <a class="py-2.5 hover:text-gray-900" href=""><span>Fantasias</span></a>
+                <a class="py-2.5 hover:text-gray-900" href=""><span>Outlet</span></a>
+              </ul>
+            </div>
+          </div>
+        </label>
+
+        <!--menu desktop-->
+        <ul class="text-lg leading-5 text-white font-semibold lg:align-center hidden">
+          <a class="nav-link-menu" href=""><span>Acessórios</span></a>
+          <a class="nav-link-menu" href=""><span>Cosméticos</span></a>
+          <a class="nav-link-menu" href=""><span>Fetiches</span></a>
+          <a class="nav-link-menu" href=""><span>Mulheres</span></a>
+          <a class="nav-link-menu" href=""><span>Homens</span></a>
+          <a class="nav-link-menu" href=""><span>Preservativos</span></a>
+          <a class="nav-link-menu" href=""><span>Fantasias</span></a>
+          <a class="nav-link-menu" href=""><span>Outlet</span></a>
+        </ul>
+
+      </nav>
+    </div>
+  </header>
+
+  <!--Carrousel-->
+  <section aria-label="banners" class="relative overflow-hidden w-full mx-auto ">
+    <div class="splide" id="banner-carousel">
+      <div class="splide__arrows hidden md:block">
+        <button
+          class="splide__arrow splide__arrow--prev z-10 absolute top-1/2 -translate-y-1/2 left-2 align-center justify-center bg-transparent hover:bg-white/20 rounded-full">
+          <i class="ph-arrow-circle-left text-5xl text-white/40 hover:text-white/60"></i>
+        </button>
+
+        <button
+          class="splide__arrow splide__arrow--next z-10 absolute top-1/2 -translate-y-1/2 right-2 align-center justify-center bg-transparent hover:bg-white/20 rounded-full">
+          <i class="ph-arrow-circle-right text-5xl text-white/40 hover:text-white/60"></i>
+        </button>
+      </div>
+
+      <div class="splide__track">
+        <div class="splide__list">
+          <picture class="w-full h-full shadow splide__slide">
+            <source media="(min-width:829px)" srcset="https://dummyimage.com/1920x420/e5e5e5">
+            <source media="(max-width:828px)" srcset="https://dummyimage.com/828x420/e5e5e5">
+            <img src="https://dummyimage.com/828x600" alt="banner" style="width:100%;">
+          </picture>
+
+          <picture class="w-full h-full shadow splide__slide">
+            <source media="(min-width:829px)" srcset="https://dummyimage.com/1920x420/FF1B6B">
+            <source media="(max-width:828px)" srcset="https://dummyimage.com/828x420/FF1B6B">
+            <img src="https://dummyimage.com/828x600" alt="banner" style="width:100%;">
+          </picture>
+
+          <picture class="w-full h-full shadow splide__slide">
+            <source media="(min-width:829px)" srcset="https://dummyimage.com/1920x420/121214/eee">
+            <source media="(max-width:828px)" srcset="https://dummyimage.com/828x420/121214/eee">
+            <img src="https://dummyimage.com/828x600" alt="banner" style="width:100%;">
+          </picture>
+        </div>
+      </div>
+
+      <ul class="splide__pagination splide__pagination--ltr absolute bottom-2 left-1/2" role="tablist"
+        aria-label="Select a slide to show">
+        <li role="presentation">
+          <button class="splide__pagination__page is-active" type="button" role="tab" aria-controls="splide01-slide01"
+            aria-label="Go to slide 1" aria-selected="true">
+          </button>
+        </li>
+        <li role="presentation">
+          <button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide02"
+            aria-label="Go to slide 2" tabindex="-1">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <main class="">
+    <!--CountDown-->
+    <section class="wrapper px-3.5">
+      <ul
+        class="text-pink font-semibold text-xs md:text-sm xm:text-base leading-4 align-center justify-between py-5 mt-5 gap-3.5">
+        <li class="align-center flex-col sm:flex-row text-center sm:text-left group">
+          <i class="ph-credit-card-light text-2xl sm:text-3xl md:text-4xl xm:text-5xl mr-1"></i>
+          <span class="hidden xs:inline-block group-hover:inline-block w-2/3 xs:w-fit">Parcele em até 10x sem
+            juros</span>
+        </li>
+        <li class="align-center flex-col sm:flex-row text-center sm:text-left group">
+          <i class="ph-truck-light text-2xl sm:text-3xl md:text-4xl xm:text-5xl mr-1"></i>
+          <span class="hidden xs:inline-block group-hover:inline-block w-2/3 xs:w-fit">Entregamos em todo Brasil</span>
+        </li>
+        <li class="align-center flex-col sm:flex-row text-center sm:text-left group">
+          <i class="ph-chats-circle-light text-2xl sm:text-3xl md:text-4xl xm:text-5xl mr-1"></i>
+          <span class="hidden xs:inline-block group-hover:inline-block w-2/3 xs:w-fit">Atendimento personalizado</span>
+        </li>
+        <li class="align-center flex-col sm:flex-row text-center sm:text-left group">
+          <i class="ph-lock-key-open-light text-2xl sm:text-3xl md:text-4xl xm:text-5xl mr-1"></i>
+          <span class="hidden xs:inline-block group-hover:inline-block w-2/3 xs:w-fit">Compre com Qualidade e
+            Segurança</span>
+        </li>
+      </ul>
+
+
+      <div class="bg-pink align-center flex-col xm:flex-row rounded-md p-7 mt-7">
+        <div class="text-white text-center font-normal p-5 flex-1">
+          <h4 class="text-3xl leading-9 mb-5">Promoções Quentes de Início de Ano ;)</h4>
+          <p class="text-sm leading-6">Confira agora os produtos que separamos para você com preços imperdíveis. Clique
+            aqui e compre agora! #SexShop</p>
+        </div>
+
+        <div class="p-5 flex-1">
+          <ul
+            class="align-center justify-around text-white leading-4 text-2xl xs:text-3xl ss:text-4xl font-semibold gap-3.5">
+            <li class="text-center"><span id="days" class="block mb-1 pb-2.5">0</span><small id="day"
+                class="text-sm xs:text-base ss:text-lg uppercase font-normal">Dia</small></li>
+            <li class="text-center"><span id="hours" class="block mb-1 pb-2.5">0</span><small
+                class="text-sm xs:text-base ss:text-lg uppercase font-normal">Horas</small></li>
+            <li class="text-center"><span id="minutes" class="block mb-1 pb-2.5">0</span><small
+                class="text-sm xs:text-base ss:text-lg uppercase font-normal">Minutos</small></li>
+            <li class="text-center"><span id="seconds" class="block mb-1 pb-2.5">0</span><small
+                class="text-sm xs:text-base ss:text-lg uppercase font-normal">Segundos</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--Promoções-->
+    <section class="wrapper px-3.5 mt-7">
+      <h3 class="text-center text-pink text-3xl leading-10 py-7">Promoções</h3>
+
+      <div class="product-container">
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 39% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 20% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 15% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 39% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 20% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 15% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!--banners-->
+    <section class="wrapper align-center flex-col xm:flex-row gap-3.5 xm:gap-0 mt-7">
+      <div class="flex-1 px-3.5 w-full">
+        <img src="https://dummyimage.com/550x420/e5e5e5" alt="banner placeholder"
+          class="max-h-[420px] w-full object-cover rounded-md hover:translate-y-1 transition-all delay-150" />
+      </div>
+
+      <div class="flex-1 px-3.5 w-full">
+        <img src="https://dummyimage.com/550x420/e5e5e5" alt="banner placeholder"
+          class="max-h-[420px] w-full object-cover rounded-md hover:translate-y-1 transition-all delay-150" />
+      </div>
+    </section>
+
+    <!--Mais vendidos-->
+    <section class="wrapper px-3.5 mt-7">
+      <h3 class="text-center text-pink text-3xl leading-10 py-7">Mais vendidos</h3>
+
+      <div class="product-container">
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 39% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 20% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 15% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 39% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 20% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 39% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 20% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!--Marcas que trabalhamos-->
+    <section class="wrapper px-3.5 mt-7">
+      <h3 class="text-center text-gray-600 text-2xl leading-10 py-7">Marcas que trabalhamos:</h3>
+
+      <section aria-label="banners" class="relative overflow-hidden w-full mx-auto">
+        <div class="splide" id="brands">
+          <div class="splide__arrows hidden md:block">
+            <button
+              class="splide__arrow splide__arrow--prev z-10 absolute top-1/2 -translate-y-1/2 left-2 align-center justify-center bg-transparent hover:bg-black/10 rounded-full">
+              <i class="ph-caret-left-bold p-1 text-3xl text-black/40 hover:text-black/60"></i>
+            </button>
+
+            <button
+              class="splide__arrow splide__arrow--next z-10 absolute top-1/2 -translate-y-1/2 right-2 align-center justify-center bg-transparent hover:bg-black/10 rounded-full">
+              <i class="ph-caret-right-bold p-1 text-3xl text-black/40 hover:text-black/60"></i>
+            </button>
+          </div>
+
+          <div class="splide__track">
+            <div class="splide__list">
+              <div class="splide__slide align-center justify-center">
+                <img src="./src/assets/brands/hotflowers.svg"
+                  class="object-cover max-h-20 grayscale hover:filter-none" />
+              </div>
+
+              <div class="splide__slide align-center justify-center">
+                <img src="./src/assets/brands/intt.png" class="object-cover max-h-20 grayscale hover:filter-none" />
+              </div>
+
+              <div class="splide__slide align-center justify-center">
+                <img src="./src/assets/brands/sexyfantasy.png"
+                  class="object-cover max-h-20 grayscale hover:filter-none" />
+              </div>
+
+              <div class="splide__slide align-center justify-center">
+                <img src="./src/assets/brands/segredlove.png"
+                  class="object-cover max-h-20 grayscale hover:filter-none" />
+              </div>
+
+              <div class="splide__slide align-center justify-center">
+                <img src="./src/assets/brands/forsexy.png" class="object-cover max-h-20 grayscale hover:filter-none" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!--banner-->
+    <section class="wrapper align-center mt-7">
+      <div class="flex-1 px-3.5 w-full">
+        <img src="https://dummyimage.com/1100x420/e5e5e5" alt="banner placeholder"
+          class="max-h-[420px] w-full object-cover rounded-md hover:translate-y-1 transition-all delay-150" />
+      </div>
+    </section>
+
+    <!--Lançamentos-->
+    <section class="wrapper px-3.5 mt-7">
+      <h3 class="text-center text-pink text-3xl leading-10 py-7">Lançamentos</h3>
+
+      <div class="product-container">
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 39% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 20% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Destaque']">
+                <i class="ph-star-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card group">
+          <div class="mb-3.5 relative overflow-hidden">
+            <img src="https://dummyimage.com/215/e5e5e5" alt="" class="product-card__img" />
+            <div class="absolute left-2 top-2 space-y-1">
+              <span class="badge">
+                <i class="ph-arrow-down-light mr-1"></i> 15% OFF
+              </span>
+              <span class="badge transition-all delay-500 hover:after:content-['Lançamento']">
+                <i class="ph-heart-light"></i>
+              </span>
+            </div>
+            <div class="group-hover:block hidden product-card__img-add-shoplist">
+              <i class="ph-shopping-cart-light p-3.5 bg-pink/60 text-white rounded-full"></i>
+            </div>
+          </div>
+          <div class="text-center mb-3.5">
+            <p class="text-xl font-normal leading-5 text-gray-600 mb-5">Algemas de Pelúcia</p>
+            <div class="mb-1.5">
+              <s class="text-pink/75 text-base leading-4 font-normal block"><span>R$</span> 34,99</s>
+              <strong class="text-pink text-xl leading-5 font-semibold"><span>R$</span> 29,90</strong>
+            </div>
+            <p class="text-sm leading-4 font-normal text-gray-600">ou 5x de R$ 5,98 com juros Cartão Visa</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!--banner-->
+    <section class="wrapper align-center mt-7">
+      <div class="flex-1 px-3.5 w-full">
+        <img src="https://dummyimage.com/1100x420/e5e5e5" alt="banner placeholder"
+          class="max-h-[420px] w-full object-cover rounded-md hover:translate-y-1 transition-all delay-150" />
+      </div>
+    </section>
+
+    <!--CTA-->
+    <section class="bg-pink w-full">
+      <div class="wrapper align-center justify-between gap-3.5 flex-col xm:flex-row py-7 mt-7">
+        <div class="text-white text-2xl xs:text-3xl leading-9 font-normal p-3.5 text-center xm:text-start">
+          <p class="align-center xm:inline-block mb-5">
+            <i class="ph-instagram-logo-light mr-1"></i>
+            <span class="whitespace-nowrap ss:whitespace-normal">Siga nosso instagram.</span>
+          </p>
+          <p class="text-2xl font-semibold opacity-80">@SexyShop</p>
+        </div>
+
+        <div class="p-3.5 text-white text-center">
+          <h4 class="text-2xl font-bold leading-10">Descontinho no seu Whatsapp Aqui!</h4>
+          <p class="text-lg leading-6">Receba nossas melhores promoções diretamente em seu whatsapp! #QueroPromoção</p>
+          <br />
+
+          <form class="align-center justify-center flex-col sm:flex-row flex-nowrap space-y-3.5">
+            <div class="space-y-2.5">
+              <input type="text" placeholder="(DD) 0000 0000"
+                class="px-2.5 py-auto h-11 rounded-md focus:outline-none focus:ring-0 text-gray-900 w-40" />
+              <button
+                class="border border-white py-auto h-11 px-3.5 rounded-md mx-3.5 bg-pink hover:brightness-110">Enviar
+              </button>
+            </div>
+
+            <span>ou</span>
+
+            <button
+              class="bg-white text-pink py-auto h-11 px-3.5 rounded-md ml-3.5 hover:-translate-y-1 transition-all delay-150">Catálogo
+              Online
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--Depoimentos-->
+    <section class="wrapper px-3.5 mt-7 mb-16">
+      <h3 class="text-center text-gray-600 text-2xl leading-10 py-7">Depoimentos:</h3>
+
+      <section aria-label="banners" class="relative overflow-hidden w-full mx-auto">
+        <div class="splide" id="customers">
+          <div class="splide__arrows hidden md:block">
+            <button
+              class="splide__arrow splide__arrow--prev z-10 absolute top-1/2 -translate-y-1/2 left-2 align-center justify-center bg-transparent hover:bg-black/10 rounded-full">
+              <i class="ph-caret-left-bold p-1 text-3xl text-black/40 hover:text-black/60"></i>
+            </button>
+
+            <button
+              class="splide__arrow splide__arrow--next z-10 absolute top-1/2 -translate-y-1/2 right-2 align-center justify-center bg-transparent hover:bg-black/10 rounded-full">
+              <i class="ph-caret-right-bold p-1 text-3xl text-black/40 hover:text-black/60"></i>
+            </button>
+          </div>
+
+          <div class="splide__track py-3.5">
+            <div class="splide__list">
+              <div class="splide__slide align-center justify-center ">
+                <div class="bg-gray-100 h-full flex flex-col justify-around rounded-md py-3.5 px-5">
+                  <p class="text-center text-gray-600/75 text-sm leading-4 mb-3.5">
+                    <span class="text-lg font-semibold">&quot;</span>
+                    Loremipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Ducimus voluptatum,
+                    dolores, fugiat soluta.
+                    <span class="text-lg font-semibold">&quot;</span>
+                  </p><br />
+                  <p class="text-center text-gray-600 uppercase text-base leading-7 font-medium">Maria Aparecida</p>
+                </div>
+              </div>
+
+              <div class="splide__slide align-center justify-center ">
+                <div class="bg-gray-100 h-full flex flex-col justify-around rounded-md py-3.5 px-5">
+                  <p class="text-center text-gray-600/75 text-sm leading-4 mb-3.5">
+                    <span class="text-lg font-semibold">&quot;</span>
+                    Loremipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Ducimus voluptatum,
+                    dolores, fugiat soluta.
+                    <span class="text-lg font-semibold">&quot;</span>
+                  </p><br />
+                  <p class="text-center text-gray-600 uppercase text-base leading-7 font-medium">José Eduardo</p>
+                </div>
+              </div>
+
+              <div class="splide__slide align-center justify-center ">
+                <div class="bg-gray-100 h-full flex flex-col justify-around rounded-md py-3.5 px-5">
+                  <p class="text-center text-gray-600/75 text-sm leading-4 mb-3.5">
+                    <span class="text-lg font-semibold">&quot;</span>
+                    Loremipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Ducimus voluptatum,
+                    dolores, fugiat soluta.
+                    <span class="text-lg font-semibold">&quot;</span>
+                  </p><br />
+                  <p class="text-center text-gray-600 uppercase text-base leading-7 font-medium">Lucas Amparo</p>
+                </div>
+              </div>
+
+              <div class="splide__slide align-center justify-center ">
+                <div class="bg-gray-100 h-full flex flex-col justify-around rounded-md py-3.5 px-5">
+                  <p class="text-center text-gray-600/75 text-sm leading-4 mb-3.5">
+                    <span class="text-lg font-semibold">&quot;</span>
+                    Loremipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Ducimus voluptatum,
+                    dolores, fugiat soluta.
+                    <span class="text-lg font-semibold">&quot;</span>
+                  </p><br />
+                  <p class="text-center text-gray-600 uppercase text-base leading-7 font-medium">Jessica Silva</p>
+                </div>
+              </div>
+
+              <div class="splide__slide align-center justify-center ">
+                <div class="bg-gray-100 h-full flex flex-col justify-around rounded-md py-3.5 px-5">
+                  <p class="text-center text-gray-600/75 text-sm leading-4 mb-3.5">
+                    <span class="text-lg font-semibold">&quot;</span>
+                    Loremipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Ducimus voluptatum,
+                    dolores, fugiat soluta.
+                    <span class="text-lg font-semibold">&quot;</span>
+                  </p><br />
+                  <p class="text-center text-gray-600 uppercase text-base leading-7 font-medium">Gabriely Rodriguez</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <ul class="splide__pagination splide__pagination--ltr left-1/2" role="tablist"
+            aria-label="Select a slide to show">
+            <li role="presentation">
+              <button class="splide__pagination__page is-active" type="button" role="tab"
+                aria-controls="splide01-slide01" aria-label="Go to slide 1" aria-selected="true">
+              </button>
+            </li>
+            <li role="presentation">
+              <button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide02"
+                aria-label="Go to slide 2" tabindex="-1">
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <!--SplideJS-->
+  <script src="./src/libs/@splidejs/js/splide.min.js"></script>
+  <script src="./src/js/splide.js"></script>
+
+  <script src="./src/js/index.js"></script>
+</body>
+
+</html>
